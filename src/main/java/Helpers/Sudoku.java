@@ -18,7 +18,7 @@ public class Sudoku {
 
 
     // Empty values per difficulty level
-    int[] levels = {1, 20, 40};
+    int[] levels = {10, 20, 40};
 
     Random rand = new Random();
     ArrayList<Character> valueScope = new ArrayList<>();
@@ -312,7 +312,7 @@ public class Sudoku {
             for (int OCIndex = 0 ; OCIndex < 4 ; OCIndex++) {
                 for (int IRIndex = 0 ; IRIndex < 4 ; IRIndex++) {
                     for (int ICIndex = 0 ; ICIndex < 4 ; ICIndex++) {
-                        if(originalBoard.get(ORIndex).get(OCIndex).get(IRIndex).get(ICIndex).value != SudokuBoard.get(ORIndex).get(OCIndex).get(IRIndex).get(ICIndex).value) {
+                        if(originalBoard.get(ORIndex).get(OCIndex).get(IRIndex).get(ICIndex).value != SudokuBoard.get(ORIndex).get(OCIndex).get(IRIndex).get(ICIndex).value || SudokuBoard.get(ORIndex).get(OCIndex).get(IRIndex).get(ICIndex).value == '\0') {
                             return false;
                         }
                     }

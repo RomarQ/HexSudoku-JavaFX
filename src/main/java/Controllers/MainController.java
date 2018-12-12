@@ -22,9 +22,6 @@ public final class MainController {
     private ViewFlowContext context;
 
     @FXML
-    private StackPane root;
-
-    @FXML
     private JFXDrawer drawer;
 
     /**
