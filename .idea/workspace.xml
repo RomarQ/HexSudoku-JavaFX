@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3f81d6ad-16cd-4e00-bbe6-9484021fbd32" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -109,8 +108,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="15">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -770,12 +769,12 @@
       <workItem from="1544281945771" duration="23059000" />
       <workItem from="1544314690720" duration="82986000" />
       <workItem from="1544550713895" duration="14222000" />
-      <workItem from="1544578239286" duration="8267000" />
+      <workItem from="1544578239286" duration="8409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149524000" />
+    <option name="totallyTimeSpent" value="149666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1012" extended-state="6" />
@@ -1203,8 +1202,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state relative-caret-position="15">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
         </state>
       </provider>
     </entry>
