@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<?import com.jfoenix.validation.RegexValidator?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+           xmlns="http://javafx.com/javafx/2.2" style="-fx-background-color: linear-gradient(to bottom, rgba(214,249,255,1) 0%,rgba(158,232,250,1) 100%); ">
+
+    <VBox minWidth="400" minHeight="400" spacing="40" maxWidth="400" maxHeight="400" alignment="CENTER" >
+        <children>
+
+            <VBox spacing="10" alignment="CENTER" >
+                <children>
+                    <Label styleClass="title-label">Sign In</Label>
+
+                    <Label fx:id="errorLabel" styleClass="loginError" visible="false" alignment="CENTER" />
+                </children>
+            </VBox>
+
+            <JFXTextField fx:id="username" id="validatedText" promptText="Username" labelFloat="true">
+                <validators>
+                    <RegexValidator regexPattern="([a-zA-Z0-9])\w{2,}" message="Most be 3 characters or more and only contain alphanumeric characters." />
+                    <RequiredFieldValidator message="A username is Required!">
+                    </RequiredFieldValidator>
+                </validators>
+            </JFXTextField>
+
+            <JFXPasswordField fx:id="password" id="validatedPassowrd" promptText="Password" labelFloat="true">
+                <validators>
+                    <RegexValidator regexPattern=".{5,}" message="Most be 5 characters or more" />
+                    <RequiredFieldValidator message="A password is Required!">
+                    </RequiredFieldValidator>
+                </validators>
+            </JFXPasswordField>
+
+            <VBox spacing="10" alignment="CENTER" >
+                <children>
+                    <JFXButton fx:id="loginBtn" maxWidth="1.7976931348623157E308" minHeight="40" buttonType="RAISED" text="Log in"
+                           style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;"/>
+
+                    <JFXButton fx:id="registerBtn" maxWidth="1.7976931348623157E308" minHeight="40" buttonType="RAISED" text="Register"
+                               style="-fx-text-fill:WHITE;-fx-background-color:#6379d3;-fx-font-size:14px;"/>
+                </children>
+            </VBox>
+
+        </children>
+    </VBox>
+</StackPane>

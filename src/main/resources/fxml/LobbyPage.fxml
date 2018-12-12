@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" style="-fx-background-color: linear-gradient(to bottom, rgba(214,249,255,1) 0%,rgba(158,232,250,1) 100%); ">
+    <BorderPane>
+        <top>
+            <VBox>
+                <children>
+                    <JFXToolbar>
+                        <leftItems>
+                            <Label fx:id="username" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" alignment="CENTER" styleClass="playerLabel" />
+                        </leftItems>
+                        <rightItems>
+                            <JFXButton fx:id="logoutBtn" prefHeight="40" buttonType="RAISED" text="Logout" styleClass="logoutBtn"/>
+                        </rightItems>
+                    </JFXToolbar>
+                </children>
+            </VBox>
+        </top>
+        <center>
+            <VBox minWidth="700" spacing="40" maxWidth="700" alignment="CENTER">
+                <children>
+                    <VBox spacing="5">
+                        <children>
+                            <Label HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" alignment="CENTER" styleClass="scoresLabel">Scores</Label>
+                            <JFXTreeTableView fx:id="scoreTable" maxHeight="300">
+                                <columns>
+                                    <JFXTreeTableColumn maxWidth="1.7976931348623157E308" fx:id="usernameColumn"
+                                                        minWidth="133" text="Username" resizable="false" />
+                                    <JFXTreeTableColumn fx:id="timeColumn" text="Duration"
+                                                        minWidth="133" resizable="false"></JFXTreeTableColumn>
+                                    <JFXTreeTableColumn fx:id="diffColumn" text="Difficulty"
+                                                        minWidth="133" resizable="false"></JFXTreeTableColumn>
+                                </columns>
+                            </JFXTreeTableView>
+                        </children>
+                    </VBox>
+
+                    <VBox alignment="CENTER" spacing="10">
+                        <children>
+
+                            <VBox spacing="5">
+                                <children>
+                                    <Label HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" alignment="CENTER" styleClass="difficultyLabel">Difficulty</Label>
+
+                                    <HBox spacing="20" styleClass="difficultyBox">
+                                        <children>
+                                            <JFXButton HBox.hgrow="ALWAYS" fx:id="easyBtn" maxWidth="1.7976931348623157E308"  buttonType="RAISED" text="Easy" styleClass="easyBtn"/>
+                                            <JFXButton HBox.hgrow="ALWAYS" fx:id="normalBtn" maxWidth="1.7976931348623157E308"  buttonType="RAISED" text="Normal" styleClass="normalBtn"/>
+                                            <JFXButton HBox.hgrow="ALWAYS" fx:id="hardBtn" maxWidth="1.7976931348623157E308" buttonType="RAISED" text="Hard" styleClass="hardBtn"/>
+                                        </children>
+                                    </HBox>
+                                </children>
+                            </VBox>
+
+                            <JFXButton fx:id="playBtn" maxWidth="1.7976931348623157E308" prefHeight="40" buttonType="RAISED" text="Start a new game!" styleClass="startGameBtn"/>
+                        </children>
+                    </VBox>
+                </children>
+
+            </VBox>
+        </center>
+    </BorderPane>
+</StackPane>

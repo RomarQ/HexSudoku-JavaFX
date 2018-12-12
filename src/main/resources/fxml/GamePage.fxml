@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <BorderPane>
+            <top>
+                <VBox>
+                    <children>
+                        <JFXToolbar>
+                            <center>
+                                <HBox minWidth="400" maxWidth="400">
+                                    <children>
+                                        <Label fx:id="gameTimer" styleClass="timer" />
+                                    </children>
+                                </HBox>
+                            </center>
+                        </JFXToolbar>
+                    </children>
+                </VBox>
+            </top>
+            <center>
+                <VBox maxHeight="0" alignment="CENTER" StackPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER" >
+                            <children>
+                                <VBox alignment="TOP_CENTER" style="-fx-background-color: #6379d3">
+                                    <children>
+                                        <StackPane HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label alignment="CENTER" text="Resume the game to see the board." style="-fx-font-color:#6379d3; -fx-font-size:24px;"/>
+                                                <!-- Sudoku Board will be generated in Controller -->
+                                                <GridPane fx:id="board" alignment="CENTER" VBox.vgrow="ALWAYS" styleClass="board" />
+                                            </children>
+                                        </StackPane>
+                                    </children>
+                                </VBox>
+                                <VBox styleClass="gameBox" minWidth="80.0" maxWidth="80.0" HBox.hgrow="ALWAYS">
+
+                                    <children>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="0"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="1"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="2"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="3"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="4"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="5"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="6"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="7"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="8"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="9"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="A"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="B"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="C"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="D"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="E"/>
+                                        <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="F"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+
+                    </children>
+                </VBox>
+            </center>
+            <bottom>
+                <VBox>
+                    <children>
+                        <JFXToolbar>
+                            <leftItems>
+                                <JFXButton fx:id="quitBtn" buttonType="RAISED" text="Quit" minHeight="40" style="-fx-background-color:#FFFFFF;-fx-font-size:14px;"/>
+                                <JFXButton fx:id="clearBtn" buttonType="RAISED" text="Clear board" minHeight="40" style="-fx-background-color:#FFFFFF;-fx-font-size:14px;"/>
+                            </leftItems>
+                            <rightItems>
+                                <JFXButton fx:id="pauseBtn" buttonType="RAISED" text="Pause" minHeight="40" style="-fx-background-color:#FFFFFF;-fx-font-size:14px;"/>
+                            </rightItems>
+                        </JFXToolbar>
+                    </children>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </children>
+
+
+</StackPane>
+

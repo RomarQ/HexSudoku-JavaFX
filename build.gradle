@@ -1,0 +1,25 @@
+group 'HexSudoku'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.9
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile group: 'javax.annotation', name: 'javax.annotation-api', version: '1.3.2'
+
+    compile 'com.jfoenix:jfoenix:9.0.8' // Java 9
+
+    // https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+    compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.25.2'
+
+    compile 'io.datafx:datafx:8.0.1'
+    compile 'io.datafx:flow:8.0.1'
+}
+

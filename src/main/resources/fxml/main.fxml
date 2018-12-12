@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import java.lang.String?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane>
+         <center>
+            <JFXDrawer fx:id="drawer" direction="LEFT">
+               <styleClass>
+                  <String fx:value="body"/>
+               </styleClass>
+            </JFXDrawer>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
