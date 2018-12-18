@@ -4,7 +4,7 @@ HexSudoku-JavaFX is a hexadecimal sudoku game written in Java using MVC architec
 
 ### Requirements
 
-  - JDK >= 9
+  - JDK >= 11
 
 <p align="center"><img src ="/game.png" /></p>
 <p align="center"><img src ="/win.png" /></p>
