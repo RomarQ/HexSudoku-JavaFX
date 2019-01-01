@@ -41,10 +41,11 @@ public class Main extends Application {
         try {
             Rectangle2D bounds = Screen.getScreens().get(0).getBounds();
             width = bounds.getWidth() / 2;
-            height = bounds.getHeight() / 1.2;
+            height = bounds.getHeight() / 1.1;
         } catch (Exception e){ }
 
         Scene scene = new Scene(decorator, width, height);
+
         scene.getStylesheets().addAll(Main.class.getResource("/css/style.css").toExternalForm());
 
         stage.setScene(scene);

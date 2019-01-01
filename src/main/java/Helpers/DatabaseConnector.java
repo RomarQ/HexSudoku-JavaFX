@@ -5,11 +5,18 @@ import javafx.collections.ObservableList;
 import org.sqlite.SQLiteException;
 
 import java.io.File;
-import java.sql.*;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import static org.sqlite.SQLiteErrorCode.SQLITE_AUTH;
 
 public class DatabaseConnector {
+
+    ObservableList<Score> scores = null;
 
     final String connectionUrl = "jdbc:sqlite:src/hexSudoku.db";
 
@@ -22,13 +29,12 @@ public class DatabaseConnector {
         if(!dbExists()) {
 
             try {
-                Class.forName("org.sqlite.JDBC");
                 Connection c = DriverManager.getConnection(connectionUrl);
                 Statement stmt = c.createStatement();
                 String userTable =
                         "CREATE TABLE User (" +
                         "Id             INTEGER    PRIMARY KEY    AUTOINCREMENT   NOT NULL," +
-                        "Username           TEXT       UNIQUE         NOT NULL," +
+                        "Username       TEXT       UNIQUE         NOT NULL," +
                         "Password       TEXT       NOT NULL)";
                 String scoreTable =
                         "CREATE TABLE Score (" +
@@ -53,7 +59,6 @@ public class DatabaseConnector {
         User user = null;
 
         try {
-            Class.forName("org.sqlite.JDBC");
             Connection c = DriverManager.getConnection(connectionUrl);
 
             c.setAutoCommit(false);
@@ -72,7 +77,7 @@ public class DatabaseConnector {
             c.commit();
             c.close();
 
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
 
@@ -81,10 +86,10 @@ public class DatabaseConnector {
 
     public ObservableList<Score> getScores() {
 
-        ObservableList<Score> scores = FXCollections.observableArrayList();;
+        if(scores == null)
+            scores = FXCollections.observableArrayList();
 
         try {
-            Class.forName("org.sqlite.JDBC");
             Connection c = DriverManager.getConnection(connectionUrl);
 
             c.setAutoCommit(false);
@@ -112,7 +117,7 @@ public class DatabaseConnector {
             c.commit();
             c.close();
 
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
 
@@ -124,7 +129,6 @@ public class DatabaseConnector {
         User user = null;
 
         try {
-            Class.forName("org.sqlite.JDBC");
             Connection c = DriverManager.getConnection(connectionUrl);
 
             c.setAutoCommit(false);
@@ -147,7 +151,7 @@ public class DatabaseConnector {
             c.commit();
             c.close();
 
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
 
@@ -159,7 +163,6 @@ public class DatabaseConnector {
             int userId = 0;
 
             try {
-                Class.forName("org.sqlite.JDBC");
                 Connection c = DriverManager.getConnection(connectionUrl);
 
                 // Needed to be able to return userId
@@ -177,7 +180,7 @@ public class DatabaseConnector {
                 c.commit();
                 c.close();
 
-            } catch (ClassNotFoundException | SQLException e) {
+            } catch (SQLException e) {
                 System.out.println(e.getMessage());
                 if(e.getClass() == SQLiteException.class) {
                     throw new SQLiteException("Username already exists!", SQLITE_AUTH);
@@ -193,7 +196,6 @@ public class DatabaseConnector {
             int scoreId = 0;
 
             try {
-                Class.forName("org.sqlite.JDBC");
                 Connection c = DriverManager.getConnection(connectionUrl);
 
                 // Needed to be able to return scoreId
@@ -212,7 +214,7 @@ public class DatabaseConnector {
                 c.commit();
                 c.close();
 
-            } catch (ClassNotFoundException | SQLException e) {
+            } catch (SQLException e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
             }
 

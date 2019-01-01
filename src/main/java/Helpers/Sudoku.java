@@ -16,6 +16,7 @@ public class Sudoku {
     // This value is updated everytime the user selects a TextField
     Input selectedTextField;
 
+    int cellSize = 32;
 
     // Empty values per difficulty level
     int[] levels = {10, 20, 40};
@@ -175,8 +176,8 @@ public class Sudoku {
 
                         cell.setOnMouseClicked((event) -> this.selectedTextField = cell);
 
-                        cell.setMinSize(40,40);
-                        cell.setMaxSize(40, 40);
+                        cell.setMinSize(cellSize, cellSize);
+                        cell.setMaxSize(cellSize, cellSize);
                         cell.setText(value);
 
                         if(!value.equals("\0")) {

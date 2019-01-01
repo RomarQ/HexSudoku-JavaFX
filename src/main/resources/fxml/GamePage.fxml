@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.BorderPane?>
 
-<StackPane xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" >
+<JFXScrollPane xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" >
     <children>
         <BorderPane>
             <top>
@@ -43,7 +43,6 @@
                                     </children>
                                 </VBox>
                                 <VBox styleClass="gameBox" minWidth="80.0" maxWidth="80.0" HBox.hgrow="ALWAYS">
-
                                     <children>
                                         <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="0"/>
                                         <JFXButton styleClass="optionBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS" buttonType="RAISED" onAction="#addValue" text="1"/>
@@ -89,5 +88,5 @@
     </children>
 
 
-</StackPane>
+</JFXScrollPane>
 
